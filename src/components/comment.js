@@ -1,7 +1,7 @@
 import React from 'react'
 import colors from '../assets/colors/colors'
 
-const Comment = ({ comment }) => {
+const comment = ({ comment }) => {
     return (
         <div style={styles.commentWrapper}>
             <p style={styles.email}>{comment.email}</p>
@@ -11,10 +11,12 @@ const Comment = ({ comment }) => {
     )
 }
 
-export default Comment
+export default comment
 
 const styles = {
     commentWrapper: {
+        backgroundColor: colors.white,
+        color: colors.textLight,
         marginTop: '20px',
         width: '60%',
         display: 'flex',
