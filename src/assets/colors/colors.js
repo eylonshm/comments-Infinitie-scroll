@@ -1,7 +1,7 @@
 const colors = {
-    background: '#F7F9FB',
-    textDark: '#31708E',
-    textLight: '#687864',
+    background: '#FFFFFF',
+    textDark: '#333333',
+    textLight: '#ADADAD',
 }
 
 export default colors

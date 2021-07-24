@@ -1,9 +1,9 @@
 import React from 'react'
 import colors from '../assets/colors/colors'
 
-const comment = ({ comment }) => {
+const comment = ({ comment, reference }) => {
     return (
-        <div style={styles.commentWrapper}>
+        <div ref={reference} style={styles.commentWrapper}>
             <p style={styles.email}>{comment.email}</p>
             <h3 style={styles.name}>{comment.name}</h3>
             <p>{comment.body}</p>
@@ -16,7 +16,7 @@ export default comment
 const styles = {
     commentWrapper: {
         backgroundColor: colors.white,
-        color: colors.textLight,
+        color: colors.textDark,
         marginTop: '20px',
         width: '60%',
         display: 'flex',
@@ -34,5 +34,6 @@ const styles = {
     email: {
         marginBottom: '10px',
         fontSize: '13px',
+        color: colors.textLight,
     },
 }
