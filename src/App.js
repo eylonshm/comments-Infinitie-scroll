@@ -3,8 +3,9 @@ import './App.css'
 import './assets/fonts/fonts.css'
 import colors from './assets/colors/colors'
 import Comment from './components/comment'
-import useCommentsLoader from './utils/useCommentsLoader'
 import Title from './components/title'
+import AddComment from './components/addComment'
+import useCommentsLoader from './utils/useCommentsLoader'
 import ClipLoader from 'react-spinners/ClipLoader'
 function App() {
     const [sliceIndex, setSliceIndex] = useState(0)
@@ -32,6 +33,7 @@ function App() {
     return (
         <div style={styles.appWrapper}>
             <Title />
+            <AddComment />
             {comments.map((comment, index) => {
                 if (comments.length === index + 1) {
                     return <Comment key={comment.id} comment={comment} reference={lastCommentElementRef} />
@@ -40,7 +42,7 @@ function App() {
                 }
             })}
 
-            <ClipLoader loadin={loading} color={colors.textDark} loading={loading} size={35} css={{ margin: '10px 0' }} />
+            <ClipLoader loading={loading} color={colors.textDark} loading={loading} size={35} css={{ margin: '10px 0' }} />
 
             {error && (
                 <p>
